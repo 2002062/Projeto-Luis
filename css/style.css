@@ -290,4 +290,187 @@ body {
 .lista-exercicios li a:hover {
     color: var(--cor-hover); /* Cor de hover definida no tema */
 }
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #558b8f;
+    color: white;
+}
+
+.header h1 {
+    font-size: 2.5em;
+}
+
+.header p {
+    margin: 10px 0;
+}
+
+/* Estilo dos cartões */
+.cartoes {
+    padding: 20px;
+    text-align: center;
+}
+
+.cartoes h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.cartoes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.cartao {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cartao i {
+    font-size: 2.5em;
+    color: #558b8f;
+    margin-bottom: 10px;
+}
+
+.cartao h3 {
+    margin: 10px 0;
+}
+
+.cartao h3 a {
+    text-decoration: none;
+    color: #4a148c;
+    font-size: 1.2em;
+}
+
+.cartao h3 a:hover {
+    text-decoration: underline;
+}
+
+.cartao p {
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    background-color: #558b8f;
+    color: white;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: #d1c4e9;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+/* Ativar Scroll Suave */
+html {
+    scroll-behavior: smooth;
+}
+/* ---------------------------- */
+/* --- Cabeçalho --- */
+/* ---------------------------- */
+.header {
+    background: var(--cor-principal);
+    color: #fff;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.menu-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.botao-menu {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    background: var(--cor-hover);
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.botao-menu:hover {
+    background: var(--cor-principal);
+}
+
+/* ---------------------------- */
+/* --- Cartões --- */
+/* ---------------------------- */
+.cartoes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.cartao {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartao:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cartao i {
+    font-size: 2rem;
+    color: var(--cor-principal);
+}
+
+.cartao h3 {
+    margin: 15px 0 10px;
+}
+
+.cartao p {
+    font-size: 1rem;
+    color: var(--cor-texto);
+}
+
 
