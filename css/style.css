@@ -1,0 +1,293 @@
+/* ---------------------------- */
+/* --- Reset e Variáveis Globais --- */
+/* ---------------------------- */
+:root {
+    --cor-principal: #4F9E9D; /* Verde água */
+    --cor-secundaria: #ECECEC; /* Fundo claro */
+    --cor-texto: #333; /* Texto */
+    --cor-hover: #22776E; /* Hover */
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cor-secundaria);
+    color: var(--cor-texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+/* ---------------------------- */
+/* --- Cabeçalho --- */
+/* ---------------------------- */
+.header {
+    background: var(--cor-principal);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.btn-exercicios {
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    background: var(--cor-hover);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--cor-principal);
+}
+
+/* ---------------------------- */
+/* --- Menu de Navegação --- */
+/* ---------------------------- */
+.menu-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.botao-menu {
+    text-decoration: none;
+    color: white;
+    background: var(--cor-hover);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.botao-menu:hover {
+    background: var(--cor-principal);
+}
+
+/* ---------------------------- */
+/* --- Cartões (Página Inicial) --- */
+/* ---------------------------- */
+.cartoes h2 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.8rem;
+}
+
+.cartoes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cartao {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cartao i {
+    font-size: 4rem;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+/* ---------------------------- */
+/* --- Galeria (Imagens em Mosaico) --- */
+/* ---------------------------- */
+.historia-e-galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    align-items: center;
+}
+
+.historia-e-galeria .texto {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 600px;
+}
+
+.historia-e-galeria .imagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.historia-e-galeria .imagens img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.historia-e-galeria .imagens img:hover {
+    transform: scale(1.05);
+}
+
+/* ---------------------------- */
+/* --- Rodapé --- */
+/* ---------------------------- */
+.footer {
+    background: var(--cor-principal);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Garante que o rodapé fica no final */
+}
+
+/* ---------------------------- */
+/* --- Responsividade --- */
+/* ---------------------------- */
+@media (max-width: 768px) {
+    .historia-e-galeria {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-botoes {
+        flex-direction: column;
+    }
+}
+/* ---------------------------- */
+/* --- Estilo para Galeria de Imagens (Mosaico) --- */
+/* ---------------------------- */
+.imagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Múltiplas colunas responsivas */
+    gap: 15px; /* Espaço entre as imagens */
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.imagens img {
+    width: 100%; /* Ocupa todo o espaço da célula */
+    height: 150px; /* Altura fixa */
+    object-fit: cover; /* Recorta a imagem proporcionalmente */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    transition: transform 0.3s ease;
+}
+
+.imagens img:hover {
+    transform: scale(1.05); /* Zoom suave ao passar o mouse */
+}
+/* Estilo específico para imagens quadradas */
+.imagens-quadradas img {
+    height: 150px; /* Altura igual à largura para ficar quadrado */
+    width: 150px; /* Define o tamanho fixo */
+    object-fit: cover; /* Recorta a imagem proporcionalmente */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    transition: transform 0.3s ease;
+}
+
+.imagens-quadradas img:hover {
+    transform: scale(1.05); /* Zoom suave ao passar o mouse */
+}
+/* Estilo específico para imagens quadradas */
+.imagens-quadradas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Layout de mosaico */
+    gap: 15px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.imagens-quadradas img {
+    width: 150px; /* Largura fixa para garantir formato quadrado */
+    height: 150px; /* Altura fixa para garantir formato quadrado */
+    object-fit: cover; /* Garante que as imagens sejam ajustadas proporcionalmente */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    transition: transform 0.3s ease;
+}
+
+.imagens-quadradas img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+/* ---------------------------- */
+/* --- Estilo para Post-its --- */
+/* ---------------------------- */
+.lista-exercicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Layout responsivo */
+    gap: 20px;
+    justify-items: center; /* Centraliza os Post-its */
+    padding: 20px;
+    list-style: none; /* Remove os marcadores da lista */
+}
+
+.lista-exercicios li {
+    position: relative;
+    background: #fffa86; /* Cor amarela de Post-it */
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: rotate(-3deg); /* Inclinação inicial */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lista-exercicios li:hover {
+    transform: rotate(0deg) scale(1.1); /* Post-it endireita e cresce ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.lista-exercicios li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.lista-exercicios li a:hover {
+    color: var(--cor-hover); /* Cor de hover definida no tema */
+}
+

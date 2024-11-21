@@ -1,0 +1,20 @@
+header, footer { color: white; 
+	    		 background-color: black;
+			   }
+ 
+nav { 
+    background-color: purple; }  
+
+section { color:greenyellow;
+    background-color: orange }
+
+article { background-color: green }
+
+main { background-color: blue; }
+
+
+
+
+#highlight { color: black; 
+	         background-color: yellow;
+           }
