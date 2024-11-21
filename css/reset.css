@@ -1,7 +1,7 @@
 /* --- Reset Global --- */
 /* --- Objetivo de remover estilos padrão aplicados pelos navegadores, garantindo consistência entre diferentes navegadores -- */
 * {
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove espaçamento padrão */
+    margin: 20; /* Remove margens padrão */
+    padding: 20; /* Remove espaçamento padrão */
     box-sizing: border-box; /* Inclui bordas e margens no tamanho total */
 }
